@@ -1,5 +1,9 @@
 [rustfmt]
 overrideCommand = ["leptosfmt", "--stdin", "--rustfmt"]
 
+# Stop cargo-check bursts on every save — 16GB laptop, RA + browser in RAM
+# was pushing into swap. Re-enable if you miss on-save clippy lints.
+checkOnSave = false
+
 [cargo]
 features = "all"
